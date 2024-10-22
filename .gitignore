@@ -1,4 +1,8 @@
 /.ipynb_checkpoints
 /.cache
+/__pycache__
 /resources/config.yaml
 /data
+/lambda_layers
+/How-to-create-Lambda Layer.txt
+/spotify_auth_page_response.json
