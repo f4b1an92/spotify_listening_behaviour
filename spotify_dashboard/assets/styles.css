@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url('fonts/Metropolis-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('fonts/Metropolis-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('fonts/Metropolis-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('fonts/Metropolis-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Metropolis', sans-serif;
+    min-width: 0;
+    min-height: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+#react-entry-point {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#react-entry-point > div,
+#_dash-app-content,
+#_dash-app-content > div {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* Force all Dash graph containers to respect bounds */
+.js-plotly-plot,
+.plotly,
+.plot-container {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+
+/* Main dropdown styling */
+.main-dropdown .Select-control {
+    background-color: black !important;
+    border-color: rgb(40, 210, 100) !important;
+}
+
+.main-dropdown .Select-placeholder {
+    color: rgb(40, 210, 100) !important;
+}
+
+.main-dropdown .Select-input input {
+    color: rgb(40, 210, 100) !important;
+}
+
+.main-dropdown .Select-value-label {
+    color: rgb(40, 210, 100) !important;
+}
+
+.main-dropdown .Select-menu-outer {
+    background-color: black !important;
+}
+
+.main-dropdown .VirtualizedSelectOption {
+    background-color: black !important;
+    color: rgb(40, 210, 100) !important;
+}
+
+.main-dropdown .VirtualizedSelectFocusedOption {
+    background-color: rgb(40, 40, 40) !important;
+}
+/* Slider styling */
+.rc-slider {
+    position: relative;
+    height: 24px;
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 6px;
+    touch-action: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rc-slider * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rc-slider-rail {
+    position: absolute;
+    width: 100%;
+    background-color: #5a5a5a;
+    height: 8px;
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rc-slider-track {
+    position: absolute;
+    left: 0;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #5a5a5a;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rc-slider-handle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    margin-top: -8px;
+    cursor: grab;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(40, 210, 100);
+    touch-action: pan-x;
+}
+
+.rc-slider-handle:hover {
+    background-color: rgb(50, 230, 120);
+}
+
+.rc-slider-handle:active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    background-color: rgb(50, 230, 120);
+}
+
+.rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+    border-color: rgb(50, 230, 120);
+    box-shadow: 0 0 0 5px rgba(40, 210, 100, 0.3);
+}
+
+.rc-slider-mark {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+.rc-slider-mark-text {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    color: #999;
+}
+
+.rc-slider-mark-text-active {
+    color: #666;
+}
+
+.rc-slider-step {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rc-slider-dot {
+    position: absolute;
+    bottom: -2px;
+    margin-left: -4px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #e9e9e9;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.rc-slider-dot-active {
+    border-color: #96dbfa;
+}
+
+.rc-slider-disabled {
+    background-color: #e9e9e9;
+}
+
+.rc-slider-disabled .rc-slider-track {
+    background-color: #ccc;
+}
+
+.rc-slider-disabled .rc-slider-handle,
+.rc-slider-disabled .rc-slider-dot {
+    border-color: #ccc;
+    box-shadow: none;
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+.rc-slider-disabled .rc-slider-mark-text,
+.rc-slider-disabled .rc-slider-dot {
+    cursor: not-allowed !important;
+}
+/* Reference dropdown styling */
+.reference-dropdown .Select-control {
+    background-color: black !important;
+    border-color: rgb(0, 191, 255) !important;
+}
+
+.reference-dropdown .Select-placeholder {
+    color: rgb(0, 191, 255) !important;
+}
+
+.reference-dropdown .Select-input input {
+    color: rgb(0, 191, 255) !important;
+}
+
+.reference-dropdown .Select-value-label {
+    color: rgb(0, 191, 255) !important;
+}
+
+.reference-dropdown .Select-menu-outer {
+    background-color: black !important;
+}
+
+.reference-dropdown .VirtualizedSelectOption {
+    background-color: black !important;
+    color: rgb(0, 191, 255) !important;
+}
+
+.reference-dropdown .VirtualizedSelectFocusedOption {
+    background-color: rgb(40, 40, 40) !important;
+}
+/* AG Grid review data table */
+.review-datatable {
+    --ag-background-color: black;
+    --ag-foreground-color: white;
+    --ag-header-background-color: rgb(20, 20, 20);
+    --ag-header-foreground-color: white;
+    --ag-odd-row-background-color: rgb(12, 12, 12);
+    --ag-row-hover-color: rgb(40, 40, 40);
+    --ag-border-color: rgb(50, 50, 50);
+    --ag-input-focus-border-color: rgb(30, 195, 90);
+    --ag-selected-row-background-color: rgba(30, 195, 90, 0.2);
+    --ag-font-family: 'Metropolis', sans-serif;
+    --ag-header-column-resize-handle-color: rgb(30, 195, 90);
+}
+
+.review-datatable .ag-cell {
+    display: flex;
+    align-items: center;
+}
+
+.review-datatable .ag-header-cell-label {
+    font-weight: 600;
+}
+
+.review-datatable .ag-center-header .ag-header-cell-label {
+    justify-content: center;
+}
+
+.review-datatable .ag-paging-panel {
+    color: white;
+}
+
+.review-datatable .ag-icon,
+.review-datatable .ag-paging-button:not(.ag-disabled) .ag-icon {
+    color: rgb(30, 195, 90);
+}
+
+/* Vertical slider (review page) */
+.review-vertical-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.review-vertical-slider > div {
+    height: 100% !important;
+    padding: 12px 40px 12px 0 !important;
+}
+
+.review-vertical-slider .rc-slider-vertical {
+    width: 24px;
+    height: 100%;
+    padding: 0 8px;
+}
+
+.review-vertical-slider .rc-slider-vertical .rc-slider-rail,
+.review-vertical-slider .rc-slider-vertical .rc-slider-track,
+.review-vertical-slider .rc-slider-vertical .rc-slider-step {
+    width: 8px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.review-vertical-slider .rc-slider-vertical .rc-slider-track {
+    height: auto;
+}
+
+.review-vertical-slider .rc-slider-vertical .rc-slider-handle {
+    left: 50%;
+    margin-top: 0;
+    margin-left: -12px;
+    touch-action: pan-y;
+}

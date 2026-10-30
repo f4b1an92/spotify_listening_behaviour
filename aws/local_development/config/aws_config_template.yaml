@@ -1,0 +1,7 @@
+client_id:
+client_secret:
+refresh_token:
+flask_key:
+redirect_uri: 'http://localhost:5000'
+offset: 1
+limit: 50

@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ListPrefixOnly",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::bucket-for-athena-outputs",
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": "spotify-listening-behaviour/query_results_most_recent/*"
+        }
+      }
+    },
+    {
+      "Sid": "ReadPrefixOnly",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::bucket-for-athena-outputs/spotify-listening-behaviour/query_results_most_recent/*"
+    }
+  ]
+}

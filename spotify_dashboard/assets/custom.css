@@ -1,0 +1,19 @@
+.rc-slider-tooltip-inner {
+    color: rgb(40, 210, 100) !important;
+    background-color: rgb(55, 55, 55) !important;
+    border: none !important;
+}
+
+/* iOS-style BooleanSwitch toggles */
+.boolean-switch .knob-outer {
+    transform: scale(0.85) !important;
+    cursor: pointer !important;
+}
+
+.boolean-switch {
+    cursor: pointer !important;
+}
+
+.boolean-switch .knob-track {
+    cursor: pointer !important;
+}

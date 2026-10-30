@@ -1,0 +1,47 @@
+# Secrets / credentials
+.env
+.env.*
+.cache
+.cache-*
+aws/local_development/config/aws_config.yaml
+aws/local_development/json/*.json
+
+# Personal data exports
+data/*
+!data/.gitkeep
+
+# AWS Lambda layer build artifacts
+aws/lambda/lambda_layers/lambda_layer_from_*/
+aws/lambda/lambda_layers/How-to-create*
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+spotify_dashboard/deploy/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# AI-development
+.github/agents/
+.github/prompts/
+.github/skills/
+.github/copilot-instructions.md
+docs/
+
+# Miscellaneous
+/deprecated
+/misc
