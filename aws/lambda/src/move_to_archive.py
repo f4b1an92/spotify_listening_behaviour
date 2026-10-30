@@ -41,7 +41,7 @@ def lambda_handler(event, context):
     )
     logger.info(cleanup_response['body'])
 
-    # Cleanup 'archive' folder by deleting all but the most recent 7 files
+    # Cleanup 'archive' folder by deleting all but the most recent 5 files
     cleanup_response_archive = aut.cleanup_s3_folder(
         s3_client=s3_client, 
         bucket_name=bucket_name, 

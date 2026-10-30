@@ -29,7 +29,7 @@ def lambda_handler(event, context):
         sp = spotipy.Spotify(auth=access_token) #sp = spotipy.Spotify(auth_manager=sp_oauth)
         
         # Parse recently played tracks response
-        after_thr = sut.get_timestamp_after(offset=10)  # offset in days
+        after_thr = sut.get_timestamp_after(offset=1)  # offset in days
         recently_played = sp.current_user_recently_played(
             limit=50, after=after_thr, before=None
         )

@@ -40,7 +40,10 @@ venv/
 .github/prompts/
 .github/skills/
 .github/copilot-instructions.md
-docs/
+
+# Documentation
+docs/specs/
+docs/infrastructure.md
 
 # Miscellaneous
 /deprecated
